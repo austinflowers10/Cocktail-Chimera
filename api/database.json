@@ -1,0 +1,914 @@
+{    
+    "users": [
+        {
+        "id": 1,
+        "name": "Austin Powers",
+        "email": "austinpowers@groovymail.com"
+        },
+        {
+        "id": 2,
+        "name": "Nathan Drake",
+        "email": "nathandrake@groovymail.com"
+        }
+    ],
+    "cocktails" : [
+            {
+              "id": 1,
+              "name": "Old Fashioned",
+              "description": "In a rocks glass, pour 2 oz of Bourbon, 0.25 oz Demerara Sugar Syrup, and 3 dashes of Angostura Bitters. Add a large cube of ice and stir for about 15 seconds. Squeeze an Orange Peel over the drink to express the oil and drop the peel into the glass. Add a Cocktail Cherry into the glass and serve.",
+              "method": "stirred"
+            },
+            {
+              "id": 2,
+              "name": "Gin Martini",
+              "description": "In a mixing glass, add 1.5 oz of Gin and 0.75 oz of Dry Vermouth. Add ice and stir for about 15 seconds. Strain into a chilled martini glass. Squeeze a Lemon Peel over the drink to express the oil, and either drop the peel into the glass, or discard. Add an Olive to the glass and serve.",
+              "method": "stirred"
+            },
+            {
+              "id": 3,
+              "name": "Negroni",
+              "description": "In a mixing glass, add 1 oz Gin, 1 oz Campari, and 1 oz Sweet Vermouth. Add ice and stir for about 15 seconds. Add a large ice cube to a rocks glass, and strain into the glass. Squeeze an Orange Peel over the drink to express the oil, and either drop the peel into the glass, or discard.",
+              "method": "stirred"
+            },
+            {
+              "id": 4,
+              "name": "Manhattan",
+              "description": "In a mixing glass, add 2 oz Rye Whiskey, 1 oz Sweet Vermouth, and 4 dashes of Angostura Bitters. Add ice and stir for about 15 seconds. Strain into a chilled coupe glass, add a Cocktail Cherry into the glass, and serve.",
+              "method": "stirred"
+            },
+            {
+              "id": 5,
+              "name": "Margarita",
+              "description": "Rub a Lime Wedge around the rim of a margarita glass and roll the rim in Salt. In a shaking tin, add 2 oz Tequila, 1 oz Triple Sec, and 1 oz fresh Lime Juice. Add ice and shake for about 15 seconds. Double strain into the margarita glass, garnish the rim with a Lime Wedge, and serve.",
+              "method": "shaken"
+            },
+            {
+              "id": 6,
+              "name": "Daiquiri",
+              "description": "In a shaking tin, add 2 oz Light Rum, 1 oz fresh Lime Juice, and 3/4 oz Simple Syrup.Add ice and shake for about 15 seconds. Double strain into a chilled coupe glass, garnish the rim with the Lime Wedge, and serve.",
+              "method": "shaken"
+            },
+            {
+              "id": 7,
+              "name": "Mojito",
+              "description": "In a shaking tin, add 2 oz Light Rum, 0.75 oz fresh Lime Juice, and 0.5 oz Simple Syrup. Add ice and shake for about 15 seconds. In a chilled collins glass, add several Mint Leaves and fresh ice. Strain the cocktail into the collins glass, top off with Soda Water, garnish with a Mint Sprig, and serve.",
+              "method": "shaken"
+            },
+            {
+              "id": 8,
+              "name": "Whiskey Sour",
+              "description": "In a shaking tin, add 1.5 oz Bourbon, 0.75 fresh Lemon Juice, 0.5 oz Demerara Sugar Syrup, and an Egg White. Shake without ice for 5 seconds, and then add ice and shake again for 10 seconds. Double strain into a chilled coupe glass. Carefully add some drops of Angostura Bitters onto the foam, and serve.",
+              "method": "shaken"
+            },
+            {
+              "id": 9,
+              "name": "Tom Collins",
+              "description": "In a shaking tin, add 2 oz Gin, 1 oz fresh Lemon Juice, and 0.5 oz Simple Syrup. Add ice and shake for about 15 seconds. Add fresh ice to a chilled collins glass and strain the cocktail into the glass. Top up with Soda Water, garnish with a Lemon Wedge and a Cocktail Cherry, and serve.",
+              "method": "stirred"
+            },
+            {
+              "id": 10,
+              "name": "Piña Colada",
+              "description": "In a shaking tin, add 2 oz Light Rum, 1 oz Cream of Coconut, 2 oz Unsweetened Coconut Milk, and 5 oz Pinneapple Juice. Add crushed ice and shake for about 15 seconds, or blend with an immersion blender for a slushy consistency. Pour into a tiki glass, garnish with a Pinneapple Wedge, and serve.",
+              "method": "shaken"
+            },
+            {
+              "id": 11,
+              "name": "Sidecar",
+              "description": "Coat the outside rim of a coupe glass with Lemon Juice and roll the rim in Sugar. In a shaking tin, add 1.5 oz Cognac, 1 oz Triple Sec, 0.5 oz Lemon Juice. Add ice and shake for about 15 seconds. Double strain into the chilled coupe glass and serve.",
+              "method": "shaken"
+            },
+            {
+              "id": 12,
+              "name": "Sazerac",
+              "description": "In a chilled rocks glass or small stemmed glass, rinse with a small amount of Absinthe just to coat the inside of the glass. In a mixing glass, add 2 oz Rye Whiskey, 0.25 oz Simple Syrup, and 3 dashes of Peychaud's Bitters. Strain into the glass, garnish with a Lemon Peel, and serve.",
+              "method": "stirred"
+            },
+            {
+              "id": 13,
+              "name": "Mai Tai",
+              "description": "In a shaking tin, add 1 oz Light Rum, 1 oz Dark Rum, 0.5 oz of Dry Curaçao, 1 oz fresh Lime Juice, and 0.5 oz Orgeat Syrup. Add crushed ice and shake for about 15 seconds. Pour the cocktail with the ice into a tiki glass or rocks glass, garnish with a Mint Sprig and a Lime Wedge, and serve.   ",
+              "method": "shaken"
+            },
+            {
+              "id": 14,
+              "name": "Moscow Mule",
+              "description": "In a copper mug, add 2 oz Vodka and 0.75 oz fresh Lime Juice. Add ice and stir for about 15 seconds. Top up with about 4 oz Ginger Beer. Garnish with a Lime Wedge and serve.",
+              "method": "stirred"
+            },
+            {
+              "id": 15,
+              "name": "The Last Word",
+              "description": "In a shaking tin, add 0.75 oz Gin, 0.75 oz Green Chartreuse, 0.75 fresh Lime Juice, and 0.75 Maraschino Liqueur. Add ice and shake for about 15 seconds. Double strain into a chilled coupe glass, add a Cocktail Cherry into the glass, and serve.",
+              "method": "shaken"
+            },
+            {
+              "id": 16,
+              "name": "Aviation",
+              "description": "In a mixing glass, add 2 oz Gin, 0.25 oz Crème de Violette, 0.25 Maraschino Liqueur, and 0.5 fresh Lemon Juice. Add ice and stir for about 15 seconds. Strain into a chilled coupe glass, add a Cocktail Cherry into the glass, and serve.",
+              "method": "stirred"
+            },
+            {
+                "id": 17,
+                "name": "Vodka Martini",
+                "description": "In a mixing glass, add 1.5 oz of Vodka and 0.75 oz of Dry Vermouth. Add ice and stir for about 20 seconds. Strain into a chilled martini glass. Squeeze a Lemon Peel over the drink to express the oil, and either drop the peel into the glass or discard. Add an Olive to the glass and serve.",
+                "method": "stirred"
+            }          
+    ],
+    "ingredients": [
+            {
+              "id": 1,
+              "name": "Rye Whiskey",
+              "isGarnish": false
+            },
+            {
+              "id": 2,
+              "name": "Bourbon",
+              "isGarnish": false
+            },
+            {
+              "id": 3,
+              "name": "Vodka",
+              "isGarnish": false
+            },
+            {
+              "id": 4,
+              "name": "Gin",
+              "isGarnish": false
+            },
+            {
+              "id": 5,
+              "name": "Tequila",
+              "isGarnish": false
+            },
+            {
+              "id": 6,
+              "name": "Light Rum",
+              "isGarnish": false
+            },
+            {
+              "id": 7,
+              "name": "Cognac",
+              "isGarnish": false
+            },
+            {
+              "id": 8,
+              "name": "Brandy",
+              "isGarnish": false
+            },
+            {
+              "id": 9,
+              "name": "Triple Sec",
+              "isGarnish": false
+            },
+            {
+              "id": 10,
+              "name": "Lime Juice",
+              "isGarnish": false
+            },
+            {
+              "id": 11,
+              "name": "Lemon Juice",
+              "isGarnish": false
+            },
+            {
+              "id": 12,
+              "name": "Orange Juice",
+              "isGarnish": false
+            },
+            {
+              "id": 13,
+              "name": "Pineapple Juice",
+              "isGarnish": false
+            },
+            {
+              "id": 14,
+              "name": "Cranberry Juice",
+              "isGarnish": false
+            },
+            {
+              "id": 15,
+              "name": "Grenadine",
+              "isGarnish": false
+            },
+            {
+              "id": 16,
+              "name": "Simple Syrup",
+              "isGarnish": false
+            },
+            {
+              "id": 17,
+              "name": "Dry Vermouth",
+              "isGarnish": false
+            },
+            {
+              "id": 18,
+              "name": "Sweet Vermouth",
+              "isGarnish": false
+            },
+            {
+              "id": 19,
+              "name": "Green Chartreuse",
+              "isGarnish": false
+            },
+            {
+              "id": 20,
+              "name": "Maraschino Liqueur",
+              "isGarnish": false
+            },
+            {
+              "id": 21,
+              "name": "Crème de Violette",
+              "isGarnish": false
+            },
+            {
+              "id": 22,
+              "name": "Campari",
+              "isGarnish": false
+            },
+            {
+              "id": 23,
+              "name": "Cream of Coconut",
+              "isGarnish": false
+            },
+            {
+              "id": 24,
+              "name": "Orgeat Syrup",
+              "isGarnish": false
+            },
+            {
+              "id": 25,
+              "name": "Passion Fruit Syrup",
+              "isGarnish": false
+            },
+            {
+              "id": 26,
+              "name": "Mint Leaves",
+              "isGarnish": false
+            },
+            {
+              "id": 27,
+              "name": "Olive",
+              "isGarnish": true
+            },
+            {
+              "id": 28,
+              "name": "Cocktail Cherry",
+              "isGarnish": true
+            },
+            {
+              "id": 29,
+              "name": "Salt",
+              "isGarnish": true
+            },
+            {
+              "id": 30,
+              "name": "Orange Peel",
+              "isGarnish": true
+            },
+            {
+              "id": 31,
+              "name": "Cherry Heering",
+              "isGarnish": false
+            },
+            {
+              "id": 32,
+              "name": "Blue Curaçao",
+              "isGarnish": false
+            },
+            {
+              "id": 33,
+              "name": "Blackberry Liqueur",
+              "isGarnish": false
+            },
+            {
+              "id": 34,
+              "name": "Strawberry Liqueur",
+              "isGarnish": false
+            },
+            {
+              "id": 35,
+              "name": "Peach Schnapps",
+              "isGarnish": false
+            },
+            {
+              "id": 36,
+              "name": "Elderflower Liqueur",
+              "isGarnish": false
+            },
+            {
+              "id": 37,
+              "name": "Apricot Brandy",
+              "isGarnish": false
+            },
+            {
+              "id": 38,
+              "name": "Lemon Peel",
+              "isGarnish": true
+            },
+            {
+              "id": 39,
+              "name": "Cucumber Slice",
+              "isGarnish": true
+            },
+            {
+              "id": 40,
+              "name": "Ginger Beer",
+              "isGarnish": false
+            },
+            {
+              "id": 41,
+              "name": "Coffee Liqueur",
+              "isGarnish": false
+            },
+            {
+              "id": 42,
+              "name": "Blackcurrant Liqueur",
+              "isGarnish": false
+            },
+            {
+              "id": 43,
+              "name": "Demerara Syrup",
+              "isGarnish": false
+            },
+            {
+              "id": 44,
+              "name": "Coffee Liqueur",
+              "isGarnish": false
+            },
+            {
+              "id": 45,
+              "name": "Demerara Sugar Syrup",
+              "isGarnish": false
+            },
+            {
+              "id": 46,
+              "name": "Angostura Bitters",
+              "isGarnish": false
+            },
+            {
+              "id": 47,
+              "name": "Chambord",
+              "isGarnish": false
+            },
+            {
+              "id": 48,
+              "name": "Lime Wedge",
+              "isGarnish": true
+            },
+            {
+              "id": 49,
+              "name": "Mint Sprig",
+              "isGarnish": true
+            },
+            {
+              "id": 50,
+              "name": "Sugar",
+              "isGarnish": true
+            },
+            {
+              "id": 51,
+              "name": "Soda Water",
+              "isGarnish": false
+            },
+            {
+                "id": 52,
+                "name": "Unsweetened Coconut Milk",
+                "isGarnish": false
+            }, 
+            {
+                "id": 53,
+                "name": "Pinneapple Wedge",
+                "isGarnish": true
+            },
+            {
+                "id": 54,
+                "name": "Peychaud's Bitters",
+                "isGarnish": false
+            },
+            {
+                "id": 55,
+                "name": "Absinthe",
+                "isGarnish": false
+            }, 
+            {
+                "id": 56,
+                "name": "Dark Rum",
+                "isGarnish": false
+            },
+            {
+                "id": 57,
+                "name": "Dry Curaçao",
+                "isGarnish": false
+            },
+            {
+                "id": 58,
+                "name": "Egg White",
+                "isGarnish": false
+            }                   
+    ],
+    "keywords":[
+        {
+            "id": 1,
+            "name": "sweet"
+          },
+          {
+            "id": 2,
+            "name": "salty"
+          },
+          {
+            "id": 3,
+            "name": "savory"
+          },
+          {
+            "id": 4,
+            "name": "bright"
+          },
+          {
+            "id": 5,
+            "name": "fruity"
+          },
+          {
+            "id": 6,
+            "name": "tart"
+          },
+          {
+            "id": 7,
+            "name": "bitter"
+          },
+          {
+            "id": 8,
+            "name": "dark"
+          },
+          {
+            "id": 9,
+            "name": "creamy"
+          },
+          {
+            "id": 10,
+            "name": "frothy"
+          },
+          {
+            "id": 11,
+            "name": "carbonated"
+          },
+          {
+            "id": 12,
+            "name": "light"
+          },
+          {
+            "id": 13,
+            "name": "complex"
+          },
+          {
+            "id": 14,
+            "name": "floral"
+          },
+          {
+            "id": 15,
+            "name": "spiced"
+          },
+          {
+            "id": 16,
+            "name": "herbal"
+          },
+          {
+            "id": 17,
+            "name": "mild"
+          },
+          {
+            "id": 18,
+            "name": "dry"
+          }
+    ],
+    "cocktailIngredients":[
+            {
+              "id": 1,
+              "cocktailId": 1,
+              "ingredientId": 2
+            },
+            {
+              "id": 2,
+              "cocktailId": 1,
+              "ingredientId": 45
+            },
+            {
+              "id": 3,
+              "cocktailId": 1,
+              "ingredientId": 46
+            },
+            {
+              "id": 4,
+              "cocktailId": 1,
+              "ingredientId": 30
+            },
+            {
+              "id": 5,
+              "cocktailId": 1,
+              "ingredientId": 28
+            },
+            {
+                "id": 6,
+                "cocktailId": 2,
+                "ingredientId": 4
+              },
+              {
+                "id": 7,
+                "cocktailId": 2,
+                "ingredientId": 17
+              },
+              {
+                "id": 8,
+                "cocktailId": 2,
+                "ingredientId": 38
+              },
+              {
+                "id": 9,
+                "cocktailId": 2,
+                "ingredientId": 27
+              },
+              {
+                "id": 10,
+                "cocktailId": 3,
+                "ingredientId": 4
+              },
+              {
+                "id": 11,
+                "cocktailId": 3,
+                "ingredientId": 22
+              },
+              {
+                "id": 12,
+                "cocktailId": 3,
+                "ingredientId": 18
+              },
+              {
+                "id": 13,
+                "cocktailId": 3,
+                "ingredientId": 30
+              },
+              {
+                "id": 14,
+                "cocktailId": 4,
+                "ingredientId": 1
+              },
+              {
+                "id": 15,
+                "cocktailId": 4,
+                "ingredientId": 18
+              },
+              {
+                "id": 16,
+                "cocktailId": 4,
+                "ingredientId": 46
+              },
+              {
+                "id": 17,
+                "cocktailId": 4,
+                "ingredientId": 28
+              },
+              {
+                "id": 18,
+                "cocktailId": 5,
+                "ingredientId": 5
+              },
+              {
+                "id": 19,
+                "cocktailId": 5,
+                "ingredientId": 9
+              },
+              {
+                "id": 20,
+                "cocktailId": 5,
+                "ingredientId": 10
+              },
+              {
+                "id": 21,
+                "cocktailId": 5,
+                "ingredientId": 48
+              },
+              {
+                "id": 22,
+                "cocktailId": 5,
+                "ingredientId": 29
+              },
+              {
+                "id": 23,
+                "cocktailId": 6,
+                "ingredientId": 6
+              },
+              {
+                "id": 24,
+                "cocktailId": 6,
+                "ingredientId": 10
+              },
+              {
+                "id": 25,
+                "cocktailId": 6,
+                "ingredientId": 16
+              },
+              {
+                "id": 26,
+                "cocktailId": 6,
+                "ingredientId": 48
+              },
+              {
+                "id": 27,
+                "cocktailId": 7,
+                "ingredientId": 6
+              },
+              {
+                "id": 28,
+                "cocktailId": 7,
+                "ingredientId": 10
+              },
+              {
+                "id": 29,
+                "cocktailId": 7,
+                "ingredientId": 16
+              },  
+              {
+                "id": 30,
+                "cocktailId": 7,
+                "ingredientId": 26
+              },
+              {
+                "id": 31,
+                "cocktailId": 7,
+                "ingredientId": 51
+              },
+              {
+                "id": 32,
+                "cocktailId": 7,
+                "ingredientId": 49
+              },
+              {
+                "id": 33,
+                "cocktailId": 8,
+                "ingredientId": 2
+              },
+              {
+                "id": 34,
+                "cocktailId": 8,
+                "ingredientId": 11
+              },
+              {
+                "id": 35,
+                "cocktailId": 8,
+                "ingredientId": 45
+              },
+              {
+                "id": 36,
+                "cocktailId": 8,
+                "ingredientId": 58
+              },
+              {
+                "id": 37,
+                "cocktailId": 8,
+                "ingredientId": 46
+              },
+              {
+                "id": 38,
+                "cocktailId": 9,
+                "ingredientId": 4
+              },
+              {
+                "id": 39,
+                "cocktailId": 9,
+                "ingredientId": 11
+              },
+              {
+                "id": 40,
+                "cocktailId": 9,
+                "ingredientId": 16
+              },
+              {
+                "id": 41,
+                "cocktailId": 9,
+                "ingredientId": 51
+              },
+              {
+                "id": 42,
+                "cocktailId": 9,
+                "ingredientId": 48
+              },
+              {
+                "id": 43,
+                "cocktailId": 9,
+                "ingredientId": 28
+              },
+              {
+                "id": 44,
+                "cocktailId": 10,
+                "ingredientId": 6
+              },
+              {
+                "id": 45,
+                "cocktailId": 10,
+                "ingredientId": 23
+              },
+              {
+                "id": 46,
+                "cocktailId": 10,
+                "ingredientId": 52
+              },
+              {
+                "id": 47,
+                "cocktailId": 10,
+                "ingredientId": 13
+              },
+              {
+                "id": 48,
+                "cocktailId": 10,
+                "ingredientId": 53
+              },
+              {
+                "id": 49,
+                "cocktailId": 11,
+                "ingredientId": 7
+              },
+              {
+                "id": 50,
+                "cocktailId": 11,
+                "ingredientId": 9
+              },
+              {
+                "id": 51,
+                "cocktailId": 11,
+                "ingredientId": 11
+              },
+              {
+                "id": 52,
+                "cocktailId": 11,
+                "ingredientId": 50
+              },
+              {
+                "id": 53,
+                "cocktailId": 12,
+                "ingredientId": 1
+              },
+              {
+                "id": 54,
+                "cocktailId": 12,
+                "ingredientId": 16
+              },
+              {
+                "id": 55,
+                "cocktailId": 12,
+                "ingredientId": 54
+              },
+              {
+                "id": 56,
+                "cocktailId": 12,
+                "ingredientId": 38
+              },
+              {
+                "id": 57,
+                "cocktailId": 12,
+                "ingredientId": 55
+              },
+              {
+                "id": 58,
+                "cocktailId": 13,
+                "ingredientId": 6
+              },
+              {
+                "id": 59,
+                "cocktailId": 13,
+                "ingredientId": 56
+              },
+              {
+                "id": 60,
+                "cocktailId": 13,
+                "ingredientId": 57
+              },
+              {
+                "id": 61,
+                "cocktailId": 13,
+                "ingredientId": 10
+              },
+              {
+                "id": 62,
+                "cocktailId": 13,
+                "ingredientId": 24
+              },
+              {
+                "id": 63,
+                "cocktailId": 13,
+                "ingredientId": 49
+              },
+              {
+                "id": 64,
+                "cocktailId": 13,
+                "ingredientId": 48
+              },
+              {
+                "id": 65,
+                "cocktailId": 14,
+                "ingredientId": 3
+              },
+              {
+                "id": 66,
+                "cocktailId": 14,
+                "ingredientId": 10
+              },
+              {
+                "id": 67,
+                "cocktailId": 14,
+                "ingredientId": 40
+              },
+              {
+                "id": 68,
+                "cocktailId": 14,
+                "ingredientId": 48
+              },
+              {
+                "id": 69,
+                "cocktailId": 15,
+                "ingredientId": 4
+              },
+              {
+                "id": 70,
+                "cocktailId": 15,
+                "ingredientId": 19
+              },
+              {
+                "id": 71,
+                "cocktailId": 15,
+                "ingredientId": 10
+              },
+              {
+                "id": 72,
+                "cocktailId": 15,
+                "ingredientId": 20
+              },
+              {
+                "id": 73,
+                "cocktailId": 15,
+                "ingredientId": 28
+              },
+              {
+                "id": 74,
+                "cocktailId": 16,
+                "ingredientId": 4
+              },
+              {
+                "id": 75,
+                "cocktailId": 16,
+                "ingredientId": 21
+              },
+              {
+                "id": 76,
+                "cocktailId": 16,
+                "ingredientId": 20
+              },
+              {
+                "id": 77,
+                "cocktailId": 16,
+                "ingredientId": 11
+              },
+              {
+                "id": 78,
+                "cocktailId": 16,
+                "ingredientId": 28
+              },
+              {
+                "id": 79,
+                "cocktailId": 17,
+                "ingredientId": 3
+              },
+              {
+                "id": 80,
+                "cocktailId": 17,
+                "ingredientId": 17
+              },
+              {
+                "id": 81,
+                "cocktailId": 17,
+                "ingredientId": 38
+              },
+              {
+                "id": 82,
+                "cocktailId": 17,
+                "ingredientId": 27
+              }
+    ],
+    "ingredientKeywords": [
+
+    ],
+    "userCocktails": [
+
+    ],
+    "userIngredients": [
+
+    ],
+    "userCocktailIngredients":[
+
+    ],
+    "userIngredientKeywords":[
+
+    ],
+    "userFavorites": [
+
+    ]
+}
