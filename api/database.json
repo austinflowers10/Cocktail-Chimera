@@ -11,7 +11,7 @@
             "email": "nathandrake@groovymail.com"
         }
     ],
-    "cocktails": [
+    "classicCocktails": [
         {
             "id": 1,
             "name": "Old Fashioned",
@@ -509,7 +509,7 @@
             "name": "foamy"
         }
     ],
-    "cocktailIngredients": [
+    "classicsIngredients": [
         {
             "id": 1,
             "cocktailId": 1,
