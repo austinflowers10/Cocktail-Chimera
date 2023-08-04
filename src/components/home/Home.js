@@ -13,19 +13,19 @@ export const Home = () => {
             </p>
         </div>
         <div className="home-buttons-section">
-            <button className="home-buttons" id="home-button--1" 
+            <button className="home-button" id="home-button--1" 
             onClick={() => {navigate("/classic-cocktails")}}
             >Classic Cocktails</button>
 
-            <button className="home-buttons" id="home-button--2"
+            <button className="home-button" id="home-button--2"
                 onClick={() => {navigate("/create-cocktail")}}
             >Create a Cocktail</button>
 
-            <button className="home-buttons" id="home-button--3"
+            <button className="home-button" id="home-button--3"
                 onClick={() => {navigate("/my-craft-cocktails")}}
             >My Craft Cocktails</button>
             
-            <button className="home-buttons" id="home-button--4" 
+            <button className="home-button" id="home-button--4" 
                 onClick={() => { navigate("/my-ingredients")}}
             >My Ingredients</button>
         </div>

@@ -1,0 +1,37 @@
+@keyframes highlightAnimation {
+    0% { background-color: red; }
+    100% { background-color: transparent; }
+  }
+  
+/* Apply the animation to the highlighted class */
+.highlighted {
+    animation: highlightAnimation 0.5s ease;
+}
+
+.cancel-new-ingredient-button {
+    display: none;
+}
+
+.add-ingredients-button {
+    display: flex
+}
+
+.manage-ingredients-button {
+    display: flex;
+}
+
+.delete-ingredient-buttons {
+    visibility: hidden;
+}
+
+.edit-ingredient-buttons {
+    visibility: hidden;
+}
+
+.keyword-x-buttons {
+    visibility: hidden;
+}
+.done-managing-list-button {
+    display: none;
+}
+  
