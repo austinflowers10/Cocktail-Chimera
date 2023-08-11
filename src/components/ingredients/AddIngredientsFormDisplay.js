@@ -1,10 +1,10 @@
 //function to return jsx html for the "add ingredients form"
-export const AddIngredientsFormDisplay = ({setMyIngredientsHeaderProp, newIngredientProp, setNewIngredientProp, chosenKeywordsRowContentProp, setMyIngredientsSectionContentsProp, handleAddIngredientButtonClickProp, userIngredientsProp, setDisplayStateProp, setUserKeywordChoicesProp}) => {
+export const AddIngredientsFormDisplay = ({ newIngredientProp, setNewIngredientProp, chosenKeywordsRowContentProp,  handleAddIngredientButtonClickProp, userIngredientsProp, setDisplayStateProp}) => {
     
     return <>
         <form className="ingredient-form">
 
-            <h4 className="ingredient-prompt">Please add an ingredient you have or plan to have soon</h4>
+            <h4 className="ingredient-prompt">Please add an ingredient you want to use</h4>
 
         {/* Name */}
             <fieldset>
@@ -60,13 +60,17 @@ export const AddIngredientsFormDisplay = ({setMyIngredientsHeaderProp, newIngred
                 >Save Ingredient</button>
                 
                 {/* show cancel button depending on whether userIngredients exists*/}
-                <button type="button" style={{ display: userIngredientsProp.length ? 'flex' : 'none' }}
+                <button type="button" 
                     className="cancel-new-ingredient-button"
                     onClick={() => {
-                        setDisplayStateProp('list')
+                        userIngredientsProp.length
+                        ? setDisplayStateProp('list')
+                        : setDisplayStateProp('radio')
                     }}
                 >Cancel</button>
             </div>
         </form>
     </>
 }
+
+// style={{ display: userIngredientsProp.length ? 'flex' : 'none' }}

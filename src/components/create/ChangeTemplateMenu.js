@@ -2,8 +2,10 @@ import "./CreateCocktail.css"
 import { IoStar } from "react-icons/io5";
 
 export const ChangeTemplateMenu = (
-    {favoritesProp, classicCocktailsProp, setChosenClassicProp, setMiddleSubtitleProp}) => {
+    {favoritesProp, classicCocktailsProp, setChosenClassicProp, setMiddleSubtitleProp, middleSubtitleProp}) => {
     return <div className="change-template-menu">
+            <h3 className="create-subtitles create-subtitle-flavors">{middleSubtitleProp}</h3>
+            <div className="change-template-buttons-section">
             {
                 classicCocktailsProp.map((classic) => {
                     //boolean to see if it is a favorite
@@ -18,15 +20,16 @@ export const ChangeTemplateMenu = (
                             onClick={(event) => {
                                     //update shared state object when a button is clicked
                                     setChosenClassicProp(classic)
-                                    document.querySelector(".flavor-traits-section").style.visibility = "visible"
+                                    document.querySelector(".flavor-traits-container").style.visibility = "visible"
                                     document.querySelector(".change-template-menu").style.visibility = "hidden"
-                                    // setMiddleSubtitleProp('Flavor Traits')
+                                    setMiddleSubtitleProp('Ingredients and Flavor Traits')
                                 }}
                             >{classic.name}</button>
                         </div>
                     
                 })
             }
+            </div>
         </div>
 }
     

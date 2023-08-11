@@ -1,3 +1,9 @@
+.my-ingredients-header {
+    text-align: center;
+}
+
+
+/* KeywordSelectorsDisplay and AddIngredientsFormDisplay-------------- */
 @keyframes highlightAnimation {
     0% { background-color: red; }
     100% { background-color: transparent; }
@@ -8,16 +14,61 @@
     animation: highlightAnimation 0.5s ease;
 }
 
-.cancel-new-ingredient-button {
-    display: none;
+.keyword-x-buttons {
+    visibility: hidden;
+}
+
+/* MyIngredientsListDisplay------------------------------------------ */
+.my-ingredients-list-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.my-ingredients-buttons-row {
+    display: flex;
+    flex-direction: row;
+    height: 40px
+}
+
+.my-ingredients-buttons-row > button {
+    width: 9%;
+    height: 75%;
+    margin: 0 1% 0 0;
+    align-items: center;
+}
+
+.my-ingredient-cards-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-ingredient-card {
+    margin: 0.5%;
+    border: 1px black solid;
+    border-radius: 10px;
+    width: 12%;
+    height: 8%;
+    text-align: center;
+}
+
+.my-ingredient-name {
+    height: 50%;
+    text-align: center;
+}
+
+.space-holder {
+    margin-left: auto;
 }
 
 .add-ingredients-button {
-    display: flex
+    display: block;
 }
 
 .manage-ingredients-button {
-    display: flex;
+    display: block;
 }
 
 .delete-ingredient-buttons {
@@ -28,10 +79,81 @@
     visibility: hidden;
 }
 
-.keyword-x-buttons {
-    visibility: hidden;
-}
+
 .done-managing-list-button {
     display: none;
 }
-  
+
+/* RadioIngredientsDisplay------------------------------------------ */
+
+.radio-ingredients-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-ingredients-buttons-row {
+    display: flex;
+    flex-direction: row;
+    height: 40px
+}
+
+.radio-space-holder {
+    margin-left: auto;
+}
+
+.radio-ingredients-buttons-row > button {
+    width: 9%;
+    height: 75%;
+    margin: 0 1% 0 0;
+    align-items: center;
+    text-align: center;
+}
+
+.cancel-add-ingredients-button {
+    display: none;
+    text-align: center;
+}
+
+.radio-ingredients-prompt { 
+    text-align: center;
+    width: 40%;
+    margin: 0 0 0 30%;
+}
+
+.radio-ingredients-card-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: center;
+}
+
+.radio-ingredient-cards {
+    margin: 0.5%;
+    border: 1px black solid;
+    border-radius: 10px;
+    width: 12%;
+    height: 8%;
+    text-align: center;
+}
+
+.radio-ingredient-name-row {
+    display: flex;
+    height: 50%;
+}
+
+.loading-icon-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 300px;
+}
+
+.loading-icon {
+    height: 100px;
+    width: auto;
+}
+
+
+
+
+

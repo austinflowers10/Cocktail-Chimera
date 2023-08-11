@@ -38,7 +38,7 @@ export const ApplicationViews = () => {
 
     //function to fetch userIngredients
     const fetchUserIngredients = () => {
-        fetch('http://localhost:8088/userIngredients')
+        fetch('http://localhost:8088/userIngredients?_embed=userIngredientKeywords')
             .then(response => response.json())
             .then((allUserIngredients) => {
                 // filter and set useringredients state to only the chimera_user ingredients
@@ -72,7 +72,9 @@ export const ApplicationViews = () => {
         },[]
     )
 
-
+    if (!ingredients.length || !keywords.length) {
+        return null
+    }
 
 	return (
         <Routes>
@@ -103,7 +105,7 @@ export const ApplicationViews = () => {
                     userIngredientsProp={userIngredients}
                     />}/> 
 
-                <Route path="/my-craft-cocktails" element={<></>}/>
+                
 
                 <Route path="/my-ingredients" element={<MyIngredients
                     ingredientsProp={ingredients}
@@ -112,6 +114,8 @@ export const ApplicationViews = () => {
                     keywordsProp={keywords}
                     fetchUserIngredientsProp={fetchUserIngredients}
                     />}/>
+
+                <Route path="/my-craft-cocktails" element={<></>}/>
             </Route>
         </Routes>
     )
