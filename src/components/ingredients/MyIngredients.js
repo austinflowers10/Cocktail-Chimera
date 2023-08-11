@@ -4,6 +4,7 @@ import { KeywordSelectorsDisplay } from "./KeywordSelectorsDisplay"
 import { AddIngredientsFormDisplay } from "./AddIngredientsFormDisplay"
 import { MyIngredientsListDisplay } from "./MyIngredientsListDisplay"
 import { MdOutlineCancel } from "react-icons/md";
+import { RadioIngredientsDisplay } from "./RadioIngredientsDisplay"
 
 
 export const MyIngredients = ({chimeraUserObjProp, ingredientsProp, userIngredientsProp, fetchUserIngredientsProp, keywordsProp}) => {
@@ -35,6 +36,7 @@ export const MyIngredients = ({chimeraUserObjProp, ingredientsProp, userIngredie
 
     //ingredients list menu
     const myIngredientsListComponent = () => {
+        console.log("list refreshed")
         return <MyIngredientsListDisplay
                 setMyIngredientsHeaderProp={setMyIngredientsHeader}
                 userIngredientsProp={userIngredientsProp}
@@ -43,6 +45,7 @@ export const MyIngredients = ({chimeraUserObjProp, ingredientsProp, userIngredie
                 setDisplayStateProp={setDisplayState}
                 setNewIngredientProp={setNewIngredient}
                 setUserKeywordChoicesProp={setUserKeywordChoices}
+                keywordsProp={keywordsProp}
             />
     }
 
@@ -58,9 +61,24 @@ export const MyIngredients = ({chimeraUserObjProp, ingredientsProp, userIngredie
                 keywordsProp={keywordsProp}
                 newIngredientProp={newIngredient}
                 setDisplayStateProp={setDisplayState}
+
             />
     }
 
+    const radioIngredientsComponent = () => {
+        return <RadioIngredientsDisplay
+                userIngredientsProp={userIngredientsProp}
+                setDisplayStateProp={setDisplayState}
+                setMyIngredientsSectionContentsProp={setMyIngredientsSectionContents}
+                keywordsProp={keywordsProp}
+                ingredientsProp={ingredientsProp}
+                chimeraUserObjProp={chimeraUserObjProp}
+                postUserKeywordJoinedObjectProp={postUserKeywordJoinedObject} 
+                fetchUserIngredientsProp={fetchUserIngredientsProp}
+            />
+    }
+
+    
     //handle click function here - post new ingredient and keywords and display ingredients list afterward
     //must contain the following properties:
     //userIngredients {
@@ -73,6 +91,7 @@ export const MyIngredients = ({chimeraUserObjProp, ingredientsProp, userIngredie
     //also need to add up to 4 ingredient keywords
     const handleAddIngredientButtonClick = (event) => {
         event.preventDefault()
+
         // console.log('You clicked the button')
     //only post if both of these exist
         if (userKeywordChoices.length && newIngredient.name) {
@@ -110,14 +129,15 @@ export const MyIngredients = ({chimeraUserObjProp, ingredientsProp, userIngredie
                         }
                     })
                 })
-                    .then((userKeywordJoinedObjects) => {
+                    .then(async (userKeywordJoinedObjects) => {
                         //POST the array of user keyword objects to the API
                         for (let keywordChoice of userKeywordJoinedObjects) {
-                            postUserKeywordJoinedObject(keywordChoice)
-                            .then(response => response.json())
+                            await postUserKeywordJoinedObject(keywordChoice)
+                            // .then(response => response.json())
                         }            
                     })
                     .then(fetchUserIngredientsProp)
+                    
 
     //if name does not exist but keywords exist, highlight name
         } else if (!newIngredient.name && userKeywordChoices.length) {
@@ -146,14 +166,18 @@ export const MyIngredients = ({chimeraUserObjProp, ingredientsProp, userIngredie
     }          
 
     //post keywords array function
-    const postUserKeywordJoinedObject = (joinedObject) => {
-        return fetch(`http://localhost:8088/userIngredientKeywords`, {
+    const postUserKeywordJoinedObject = async (joinedObject) => {
+         try {
+            return fetch(`http://localhost:8088/userIngredientKeywords`, {
             method: "POST",
             headers: {
                 "Content-Type":"application/json"
             },
             body: JSON.stringify(joinedObject)
         })
+        } catch (error) {
+            console.log(error)
+        }
     }
 
 
@@ -194,10 +218,12 @@ export const MyIngredients = ({chimeraUserObjProp, ingredientsProp, userIngredie
     )
 
     useEffect(() => {
-        if (userKeywordChoices.length) {
-            const keywordXButtons = document.querySelectorAll('.keyword-x-buttons');
-            for (const button of keywordXButtons) {
-                button.style.visibility = displayState === "selectors" ? "visible" : "hidden";
+        if (displayState === 'form' || displayState === 'selectors') {
+            if (userKeywordChoices.length) {
+                const keywordXButtons = document.querySelectorAll('.keyword-x-buttons');
+                for (const button of keywordXButtons) {
+                    button.style.visibility = displayState === "selectors" ? "visible" : "hidden";
+                }
             }
         }
 
@@ -211,14 +237,24 @@ export const MyIngredients = ({chimeraUserObjProp, ingredientsProp, userIngredie
         }
     }, [myIngredientsSectionContents]);
 
-    //DOES THIS USE EFFECT NEED TO WATCH ALL INGREDIENTSPROP?
 
-    //if userIngredients.length === 0, set contents of ingredients section to show the form immediately
+    //if userIngredients.length === 0, set contents of ingredients section to show the radios immediately
     //else, show ingredients list
     useEffect(() => {
-        if (userIngredientsProp.length === 0) {
-            setDisplayState('form')
-        } else {
+        if (displayState === '') {
+            if (userIngredientsProp.length === 0) {
+                setDisplayState('radio')
+            } else {
+                setDisplayState('list')
+            }
+        } else if (displayState === 'list') {
+            if (userIngredientsProp.length === 0) {
+                setDisplayState('radio')
+            } else {
+                //refresh ingredients list every time userIngredients changes
+                setMyIngredientsSectionContents(myIngredientsListComponent())
+            }            
+        } else if (displayState === 'form' || displayState === "radio") {
             setDisplayState('list')
         }
     }, [userIngredientsProp]
@@ -241,10 +277,22 @@ export const MyIngredients = ({chimeraUserObjProp, ingredientsProp, userIngredie
         } else if (displayState === "selectors") {
             setMyIngredientsSectionContents(keywordSelectorsComponent())
             // console.log('keywords use effect triggered')
+        } else if(displayState === "radio") {
+            setMyIngredientsSectionContents(radioIngredientsComponent())
+            setMyIngredientsHeader('Add Ingredients')
         }
     },[displayState]
     )
 
+    useEffect(() => {
+        if (displayState === "radio") {
+            setMyIngredientsSectionContents(radioIngredientsComponent())
+        }
+
+    },[ingredientsProp, keywordsProp]
+    )
+
+    //rerender the form every time newIngredient values change
     useEffect(() => {
         if (displayState === 'form') {
             setMyIngredientsSectionContents(addIngredientsFormComponent())
@@ -252,10 +300,11 @@ export const MyIngredients = ({chimeraUserObjProp, ingredientsProp, userIngredie
     },[newIngredient]
     )
 
-    useEffect(() => {
-        setMyIngredientsSectionContents(myIngredientsListComponent())
-    },[userIngredientsProp]
-    )
+    //show ingredients list every time userIngredients changes 
+    // useEffect(() => {
+    //     setMyIngredientsSectionContents(myIngredientsListComponent())
+    // },[userIngredientsProp]
+    // )
 
     //Main Return Statement 
     return <>

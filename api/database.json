@@ -1802,9 +1802,167 @@
     }
   ],
   "userCocktails": [],
-  "userIngredients": [],
+  "userIngredients": [
+    {
+      "userId": 1,
+      "name": "Rye Whiskey",
+      "isGarnish": false,
+      "dateAdded": "08-10-2023",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "name": "Bourbon",
+      "isGarnish": false,
+      "dateAdded": "08-10-2023",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "name": "Vodka",
+      "isGarnish": false,
+      "dateAdded": "08-10-2023",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "name": "Gin",
+      "isGarnish": false,
+      "dateAdded": "08-10-2023",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "name": "Demerara Sugar Syrup",
+      "isGarnish": false,
+      "dateAdded": "08-10-2023",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "name": "Orange Peel",
+      "isGarnish": true,
+      "dateAdded": "08-10-2023",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "name": "Cocktail Cherry",
+      "isGarnish": true,
+      "dateAdded": "08-10-2023",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "name": "Angostura Bitters",
+      "isGarnish": false,
+      "dateAdded": "08-10-2023",
+      "id": 8
+    }
+  ],
   "userCocktailIngredients": [],
-  "userIngredientKeywords": [],
+  "userIngredientKeywords": [
+    {
+      "userIngredientId": 1,
+      "keywordId": 15,
+      "id": 1
+    },
+    {
+      "userIngredientId": 1,
+      "keywordId": 18,
+      "id": 2
+    },
+    {
+      "userIngredientId": 1,
+      "keywordId": 13,
+      "id": 3
+    },
+    {
+      "userIngredientId": 1,
+      "keywordId": 21,
+      "id": 4
+    },
+    {
+      "userIngredientId": 2,
+      "keywordId": 23,
+      "id": 5
+    },
+    {
+      "userIngredientId": 2,
+      "keywordId": 18,
+      "id": 6
+    },
+    {
+      "userIngredientId": 2,
+      "keywordId": 13,
+      "id": 7
+    },
+    {
+      "userIngredientId": 2,
+      "keywordId": 21,
+      "id": 8
+    },
+    {
+      "userIngredientId": 3,
+      "keywordId": 12,
+      "id": 9
+    },
+    {
+      "userIngredientId": 3,
+      "keywordId": 18,
+      "id": 10
+    },
+    {
+      "userIngredientId": 4,
+      "keywordId": 12,
+      "id": 11
+    },
+    {
+      "userIngredientId": 4,
+      "keywordId": 14,
+      "id": 12
+    },
+    {
+      "userIngredientId": 4,
+      "keywordId": 16,
+      "id": 13
+    },
+    {
+      "userIngredientId": 4,
+      "keywordId": 18,
+      "id": 14
+    },
+    {
+      "userIngredientId": 5,
+      "keywordId": 1,
+      "id": 15
+    },
+    {
+      "userIngredientId": 5,
+      "keywordId": 8,
+      "id": 16
+    },
+    {
+      "userIngredientId": 8,
+      "keywordId": 8,
+      "id": 17
+    },
+    {
+      "userIngredientId": 8,
+      "keywordId": 15,
+      "id": 18
+    },
+    {
+      "userIngredientId": 8,
+      "keywordId": 13,
+      "id": 19
+    },
+    {
+      "userIngredientId": 8,
+      "keywordId": 7,
+      "id": 20
+    }
+  ],
   "userFavorites": [
     {
       "userId": 2,

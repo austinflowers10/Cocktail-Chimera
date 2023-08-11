@@ -1,7 +1,8 @@
 .navbar-container {
     height: 5%;
     display: flex;
-    margin: 20px 10px;
+    padding: 20px 10px;
+    background-color: rgba(255, 115, 0, 0.831);
 }
 
 .navbar-list {
@@ -16,6 +17,16 @@
     margin: 0;
     text-align: center;
 }
+
+.navbar__link {
+    color: #1b2631; /* Text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.2s; /* Smooth transition for hover effect */
+  }
+  
+  .navbar__link:hover {
+    color: white
+  }
 
 .navbar-container > h1 {
     height: 100%;
