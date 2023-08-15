@@ -17,7 +17,9 @@ fieldset {
 .create-cocktail-header {
   text-align: center;
   margin: 15px 0;
-  font-size: 30px;
+  font-size: 35px;
+  font-family: 'Staatliches', cursive;
+  font-weight: 400;
 }
 
 /* Main Page */
@@ -44,6 +46,7 @@ fieldset {
 
 .create-subtitles {
   font-size: 24px;
+  font-weight: 300;
   text-align: center;
   margin: 15px 0;
 }
@@ -116,6 +119,7 @@ fieldset {
   height: 37.5px;
   width: 30%;
   font-size: 20px;
+  font-family: 'Mina', sans-serif;
   margin-top: auto;
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
@@ -169,6 +173,9 @@ fieldset {
   height: 140px;
   border-radius: 10px;
 
+}
+.ingredient-subtitle {
+  font-weight: 300;
 }
 
 .ingredient-card {
@@ -262,6 +269,7 @@ fieldset {
   padding: 3px 6px;
   color: white;
   font-size: 18px;
+  font-family: 'Mina', sans-serif;
   margin: 3px
 }
 
@@ -316,12 +324,15 @@ fieldset {
 
 .new-cocktail-name > h4 {
   font-size: 24px;
+  font-weight: 300;
 }
 
 .new-cocktail-name-input {
   width: 80%;
   margin: 10px 0 10px 0;
   font-size: 24px;
+  font-family: 'Mina', sans-serif;
+  font-weight: bold;
   padding: 10px 5px 10px 5px;
   border: none;
   border-radius: 5px;
@@ -345,7 +356,9 @@ fieldset {
   cursor: pointer;
   width: 50%;
   height: 35px;
-  font-size: 20px
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Mina', sans-serif;
 }
 
 .grey-button {
@@ -365,11 +378,15 @@ fieldset {
 }
 
 .new-cocktail-description > h4 {
-  font-size: 20px
+  font-size: 24px;
+  font-family: 'Mina', sans-serif;
+  font-weight: 300;
 }
 
 .new-cocktail-description-input {
   font-size: 20px;
+  font-family: 'Mina', sans-serif;
+  font-weight: bold;
   padding: 10px 5px;
   border: none;
   border-radius: 5px;
@@ -411,6 +428,7 @@ fieldset {
   height: 75%;
   width: 30%;
   font-size: 20px;
+  font-family: 'Mina', sans-serif;
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s
 }
 
@@ -469,6 +487,7 @@ fieldset {
 
 .change-template-header {
   font-size: 24px;
+  font-weight: 300;
   margin-top: 10px;
   margin-right: auto;
   margin-left: auto;
@@ -548,6 +567,7 @@ fieldset {
 
 .filtered-ingredient-menu-header {
   font-size: 24px;
+  font-weight: 300;
   margin-top: 10px;
   margin-right: auto;
   margin-left: auto;
@@ -664,6 +684,8 @@ fieldset {
   width: 60%;
   height: 4.5%;
   font-size: 20px;
+  font-family: 'Mina', sans-serif;
+  font-weight: bold;
   display: flex;
   align-items: center;
   height: 39px;
@@ -727,10 +749,14 @@ fieldset {
   height: 25%;
   background-color: #2c3e50;
   margin: 0;
+ 
+
 }
 
 .modal .ant-modal-title {
-  font-size: 30px;
+  font-family: 'Staatliches', cursive;
+  font-size: 35px;
+  font-weight: 400;
   color: white;
   text-align: center;
   width: 100%
@@ -747,6 +773,7 @@ fieldset {
   align-content: center;
   justify-content: center;
   font-size: 24px;
+  font-family: 'Mina', sans-serif;
   height: 50%;
   width: 95%;
   margin-right: auto;
@@ -779,7 +806,8 @@ fieldset {
   background-color: lightgrey;
   color: #1b2631;
   box-sizing: content-box;
-
+  font-family: 'Mina', sans-serif;
+  font-weight: bold;
   display: inline-flex;
   align-items: center;  
 }
@@ -799,7 +827,8 @@ fieldset {
 .modal .ant-btn-primary {
   background-color: rgb(255, 115, 0);
   color: white;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  font-family: 'Mina', sans-serif;
 }
 
 .modal .ant-btn-primary:hover {
@@ -833,7 +862,9 @@ fieldset {
 }
 
 .modal-warning .ant-modal-title {
-  font-size: 30px;
+  font-family: 'Staatliches', cursive;
+  font-size: 35px;
+  font-weight: 400;
   color: white;
   text-align: center;
   width: 100%
@@ -850,6 +881,7 @@ fieldset {
   align-content: center;
   justify-content: center;
   font-size: 24px;
+  font-family: 'Mina', sans-serif;
   height: 50%;
   width: 95%;
   margin-right: auto;
@@ -882,7 +914,8 @@ fieldset {
   background-color: lightgrey;
   color: #1b2631;
   box-sizing: content-box;
-
+  font-family: 'Mina', sans-serif;
+  font-weight: bold;
   display: inline-flex;
   align-items: center;  
 }
@@ -902,7 +935,8 @@ fieldset {
 .modal-warning .ant-btn-primary {
   background-color: rgb(255, 115, 0);
   color: white;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  font-family: 'Mina', sans-serif;
 }
 
 .modal-warning .ant-btn-primary:hover {
@@ -954,6 +988,7 @@ fieldset {
   border-radius: 20px;
   background-color: #1b2631;
   font-size: 24px;
+  font-family: 'Mina', sans-serif;
   margin-top: 40%;
 }
 
@@ -968,6 +1003,8 @@ fieldset {
 
 .classics-redirect-button {
   font-size: 24px;
+  font-family: 'Mina', sans-serif;
+  font-weight: 300;
   height: 39px;
   width: 50%;
   border: none;

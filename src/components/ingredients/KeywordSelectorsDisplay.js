@@ -2,7 +2,7 @@ export const KeywordSelectorsDisplay = ({setMyIngredientsSectionContentsProp, ch
 
     return <>
         <div className="keyword-selectors-container">
-            <h4 className="ingredient-prompt">Add up to 4 Flavor Traits to describe {newIngredientProp.name ? newIngredientProp.name : `your ingredient`}</h4>
+            <h4 className="ingredient-prompt">Add up to 4 Flavor Traits to describe {newIngredientProp.name ? newIngredientProp.name : `your Ingredient`}</h4>
 
         {/* show chosen keywords */}
             {chosenKeywordsRowContentProp}

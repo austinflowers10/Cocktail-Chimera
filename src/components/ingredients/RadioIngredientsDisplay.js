@@ -132,7 +132,6 @@ export const RadioIngredientsDisplay = ({userIngredientsProp, setDisplayStatePro
 
             
             <div className="radio-ingredients-buttons-row">
-                <h4 className="radio-ingredients-prompt">Please select any ingredients you want to use</h4>
                 <div className="radio-space-holder"></div>
                 <button className="button add-selected-ingredients-button" 
                     disabled={!selectedIngredients.length}
@@ -174,6 +173,7 @@ export const RadioIngredientsDisplay = ({userIngredientsProp, setDisplayStatePro
                                     onChange={handleCheckboxChange}
                                 />
                                 <h4 className="radio-ingredient-name">{ingredient.name}</h4>
+                                <div className="radio-name-space-holder"></div>
                             </div>
 
                             <div className="radio-ingredient-keywords-rows">
@@ -183,7 +183,7 @@ export const RadioIngredientsDisplay = ({userIngredientsProp, setDisplayStatePro
                                             return <button key={`keyword--${keyword.id}`} className="keyword">{keyword.name}</button>
                                         })
                                     
-                                    : <p style={{margin: '0'}}>(Garnish)</p>
+                                    : <p className="radio-ingredient-garnish" style={{margin: '0'}}>(Garnish)</p>
                                 }
                             </div>
                         </div>

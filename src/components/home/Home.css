@@ -56,7 +56,6 @@
     font-family: 'Mina', sans-serif;
     /* font-weight: bold; */
     color: white;
-    font-weight: 500;
 }
 
 .home-button:hover {
@@ -66,32 +65,3 @@
     /* Change the text color on hover */
     box-shadow: 0 0 5px rgb(255, 77, 0);
 }
-
-.save-new-cocktail-button {
-    background-color: rgb(255, 115, 0);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin-top: auto;
-    height: 75%;
-    width: 30%;
-    font-size: 20px;
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s
-  }
-  
-  .save-new-cocktail-button:not(:disabled):hover {
-    background-color: rgb(255, 77, 0);
-    /* Change the background color on hover */
-    color: white;
-    /* Change the text color on hover */
-    box-shadow: 0 0 5px rgb(255, 77, 0);
-  
-  }
-  
-  .save-new-cocktail-button:disabled {
-    background-color: rgb(199, 90, 0);; /* Change the background color */
-    color: rgb(184, 184, 184); /* Change the text color */
-    cursor: auto;
-  }
