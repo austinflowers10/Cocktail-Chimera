@@ -6,10 +6,15 @@
 
 /* KeywordSelectorsDisplay and AddIngredientsFormDisplay-------------- */
 @keyframes highlightAnimation {
-    0% { background-color: red; }
-    100% { background-color: transparent; }
-  }
-  
+    0% {
+        background-color: red;
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
 /* Apply the animation to the highlighted class */
 .highlighted {
     animation: highlightAnimation 0.5s ease;
@@ -25,17 +30,32 @@
     flex-direction: column;
 }
 
+.my-ingredients-header {
+    font-size: 35px;
+    font-family: 'Staatliches', cursive;
+    font-weight: 400;
+}
+
 .my-ingredients-buttons-row {
     display: flex;
     flex-direction: row;
-    height: 40px
+    height: 40px;
+    box-sizing: border-box;
+    padding-right: 50px;
 }
 
-.my-ingredients-buttons-row > button {
-    width: 9%;
-    height: 75%;
-    margin: 0 1% 0 0;
-    align-items: center;
+.keyword {
+    height: 30px;
+    font-family: 'Mina', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: lightgrey;
+    color: #1b2631;
+    border: none;
+    margin: 2px;
+    padding: 5px 10px;
+    outline: none;
 }
 
 .my-ingredient-cards-section {
@@ -48,113 +68,618 @@
 
 .my-ingredient-card {
     margin: 0.5%;
-    border: 1px black solid;
+    border: none;
     border-radius: 10px;
-    width: 12%;
-    height: 8%;
+    width: 15%;
+    height: 200px;
     text-align: center;
+    background-color: #1b2631;
 }
 
 .my-ingredient-name {
-    height: 50%;
+    height: 35px;
+    margin: 15px 0;
     text-align: center;
+    font-size: 24px;
+    font-weight: 300;
 }
 
-.space-holder {
+/* height: 50%;
+width: 30%;
+padding: 0;
+border-radius: 10px;
+margin: 0 5%;
+border: none;
+background-color: rgb(255, 115, 0);
+color: white;
+font-size: 20px;
+font-family: 'Mina',
+sans-serif;
+transition: background-color 0.3s,
+color 0.3s,
+box-shadow 0.3s;
+cursor: pointer;
+} */
+
+
+    .add-ingredients-button {
+        height: 35px;
+        width: 250px;
+        padding: 0;
+        border-radius: 10px;
+        margin: 0 10px;
+        border: none;
+        background-color: rgb(255, 115, 0);
+        color: white;
+        font-size: 20px;
+        font-family: 'Mina', sans-serif;
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+
+    .add-ingredients-button:hover {
+        background-color: rgb(255, 77, 0);
+        /* Change the background color on hover */
+        color: white;
+        /* Change the text color on hover */
+        box-shadow: 0 0 5px rgb(255, 77, 0);
+    }
+        .space-holder {
+            margin-left: auto;
+        }
+    
+
+    .manage-ingredients-button {
+        height: 35px;
+        width: 250px;
+        padding: 0;
+        border-radius: 10px;
+        margin: 0 10px;
+        border: none;
+        background-color: rgb(255, 115, 0);
+        color: white;
+        font-size: 20px;
+        font-family: 'Mina', sans-serif;
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+
+    .manage-ingredients-button:hover {
+        background-color: rgb(255, 77, 0);
+        /* Change the background color on hover */
+        color: white;
+        /* Change the text color on hover */
+        box-shadow: 0 0 5px rgb(255, 77, 0);
+    }
+        .space-holder {
+            margin-left: auto;
+        }
+
+    .add-new-ingredient-button {
+        height: 35px;
+        width: 250px;
+        padding: 0;
+        border-radius: 10px;
+        margin: 0 10px;
+        border: none;
+        background-color: rgb(255, 115, 0);
+        color: white;
+        font-size: 20px;
+        font-family: 'Mina', sans-serif;
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+
+      .add-new-ingredient-button:hover {
+        background-color: rgb(255, 77, 0);
+        /* Change the background color on hover */
+        color: white;
+        /* Change the text color on hover */
+        box-shadow: 0 0 5px rgb(255, 77, 0);
+    }
+        .space-holder {
+            margin-left: auto;
+        }
+
+    .delete-ingredient-buttons {
+        visibility: hidden;
+    }
+
+    .edit-ingredient-buttons {
+        visibility: hidden;
+    }
+
+
+    .done-managing-list-button {
+        display: none;
+        height: 35px;
+        width: 250px;
+        padding: 0;
+        border-radius: 10px;
+        margin: 0 60px 0 10px;
+        border: none;
+        background-color: rgb(255, 115, 0);
+        color: white;
+        font-size: 20px;
+        font-family: 'Mina', sans-serif;
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+
+    .done-managing-list-button:hover {
+        background-color: rgb(255, 77, 0);
+        /* Change the background color on hover */
+        color: white;
+        /* Change the text color on hover */
+        box-shadow: 0 0 5px rgb(255, 77, 0);
+    }
+
+    .delete-ingredient-buttons {
+        height: 30px;
+        font-family: 'Mina', sans-serif;
+        font-size: 18px;
+        border-radius: 5px;
+        background-color: red;
+        color: white;
+        border: none;
+        margin: 2px;
+        padding: 5px 10px;
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+
+    .delete-ingredient-buttons:hover {
+        background-color: rgb(255, 39, 39);
+        color: white;
+        box-shadow: 0 0 5px rgb(255, 39, 39)
+    }
+
+    /* RadioIngredientsDisplay------------------------------------------ */
+
+    .radio-ingredients-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .radio-ingredients-buttons-row {
+        display: flex;
+        flex-direction: row;
+        height: 40px;
+        box-sizing: border-box;
+        padding-right: 50px;
+    }
+
+    .radio-space-holder {
+        margin-left: auto;
+    }
+
+
+    .cancel-add-ingredients-button {
+        display: none;
+        height: 35px;
+        width: 250px;
+        padding: 0;
+        border-radius: 10px;
+        margin: 0 10px;
+        border: none;
+        background-color: rgb(255, 115, 0);
+        color: white;
+        font-size: 20px;
+        font-family: 'Mina', sans-serif;
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+    
+        .cancel-add-ingredients-button:hover {
+        background-color: rgb(255, 77, 0);
+        /* Change the background color on hover */
+        color: white;
+        /* Change the text color on hover */
+        box-shadow: 0 0 5px rgb(255, 77, 0);
+    }
+
+    .add-selected-ingredients-button {
+        height: 35px;
+        width: 250px;
+        padding: 0;
+        border-radius: 10px;
+        margin: 0px 0 10px;
+        border: none;
+        background-color: rgb(255, 115, 0);
+        color: white;
+        font-size: 20px;
+        font-family: 'Mina', sans-serif;
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+    
+        .add-selected-ingredients-button:not(:disabled):hover {
+        background-color: rgb(255, 77, 0);
+        /* Change the background color on hover */
+        color: white;
+        /* Change the text color on hover */
+        box-shadow: 0 0 5px rgb(255, 77, 0);
+    }
+    
+    .add-selected-ingredients-button:disabled {
+        background-color: rgb(199, 90, 0);
+        /* Change the background color */
+        color: rgb(184, 184, 184);
+        /* Change the text color */
+        cursor: auto;
+        /* Add any additional styles to visually indicate disabled state */
+    }
+
+
+    .radio-ingredients-card-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-self: center;
+        justify-content: center;
+    }
+
+    .radio-ingredient-cards {
+            margin: 0.5%;
+            border: none;
+            border-radius: 10px;
+            width: 15%;
+            height: 125px;
+            text-align: center;
+            background-color: #1b2631;
+    }
+
+    .radio-ingredient-garnish {
+        font-size: 20px;
+    }
+
+    .radio-ingredient-name-row {
+        display: flex;
+        height: 65px;
+        align-items: center;
+    }
+
+    .radio-ingredient-name {
+        height: 35px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 300;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .radio-ingredient-input {
+        width: 24px;
+        height: 24px;
+        margin-left: 20px;
+    }
+
+    .radio-name-space-holder {
+        width: 24px;
+        height: 24px;
+        margin-right: 20px;
+    }
+
+    .loading-icon-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .loading-icon {
+        height: 300px;
+        width: auto;
+    }
+
+/* Form CSS */
+
+.ingredient-form {
+    padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  width: 60vh;
+  height: 60vh;
+  background-color: #1b2631;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.ingredient-prompt {
+    text-align: center;
+    font-weight: 300;
+    font-size: 24px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.name-label {
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.name-input {
+    width: 80%;
+    margin: 10px 0 10px 0;
+    font-size: 20px;
+    font-family: 'Mina', sans-serif;
+    font-weight: bold;
+    padding: 10px 5px 10px 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-item-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px 0 12px;
+    height: 100px;
+    width: auto;
+    border-radius: 20px;
+    background-color: #2c3e50;
+}
+
+.form-item-garnish {
+    display: flex;
+    align-items: center;
+    padding: 0 12px 0 12px;
+    height: 100px;
+    width: auto;
+    border-radius: 20px;
+    background-color: #2c3e50;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.garnish-label {
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.garnish-checkbox {
+    width: 24px;
+    height: 24px;
+    margin-right: auto;
     margin-left: auto;
 }
 
-.add-ingredients-button {
-    display: block;
-}
-
-.manage-ingredients-button {
-    display: block;
-}
-
-.delete-ingredient-buttons {
-    visibility: hidden;
-}
-
-.edit-ingredient-buttons {
-    visibility: hidden;
-}
-
-
-.done-managing-list-button {
-    display: none;
-}
-
-/* RadioIngredientsDisplay------------------------------------------ */
-
-.radio-ingredients-container {
+.flavor-traits-form {
     display: flex;
     flex-direction: column;
-}
-
-.radio-ingredients-buttons-row {
-    display: flex;
-    flex-direction: row;
-    height: 40px
-}
-
-.radio-space-holder {
-    margin-left: auto;
-}
-
-.radio-ingredients-buttons-row > button {
-    width: 9%;
-    height: 75%;
-    margin: 0 1% 0 0;
     align-items: center;
-    text-align: center;
+    padding: 0 12px 0 12px;
+    height: 250px;
+    width: auto;
+    border-radius: 20px;
+    background-color: #2c3e50;
 }
 
-.cancel-add-ingredients-button {
-    display: none;
-    text-align: center;
+.flavor-traits-subtitle {
+    font-weight: 300;
+    font-size: 24px;
+    margin: 15px 0;
 }
 
-.radio-ingredients-prompt { 
-    text-align: center;
-    width: 40%;
-    margin: 0 0 0 30%;
-}
-
-.radio-ingredients-card-section {
+.choose-keyword-row {
+    height: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
     display: flex;
-    flex-wrap: wrap;
-    align-self: center;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.add-ingredients-buttons-row {
+    margin-top: auto;
+    margin-bottom: 30px;
+    display: flex;
     justify-content: center;
 }
 
-.radio-ingredient-cards {
-    margin: 0.5%;
-    border: 1px black solid;
+.save-new-ingredient-button {
+    height: 35px;
+    width: 250px;
+    padding: 0;
     border-radius: 10px;
-    width: 12%;
-    height: 8%;
-    text-align: center;
+    border: none;
+    margin: 5px;
+    background-color: rgb(255, 115, 0);
+    color: white;
+    font-size: 20px;
+    font-family: 'Mina', sans-serif;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
 }
 
-.radio-ingredient-name-row {
+    .save-new-ingredient-button:hover {
+    background-color: rgb(255, 77, 0);
+    /* Change the background color on hover */
+    color: white;
+    /* Change the text color on hover */
+    box-shadow: 0 0 5px rgb(255, 77, 0);
+}
+
+
+
+.cancel-new-ingredient-button {
+    height: 35px;
+    width: 250px;
+    padding: 0;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(255, 115, 0);
+    color: white;
+    font-size: 20px;
+    font-family: 'Mina', sans-serif;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.cancel-new-ingredient-button:hover {
+    background-color: rgb(255, 77, 0);
+    /* Change the background color on hover */
+    color: white;
+    /* Change the text color on hover */
+    box-shadow: 0 0 5px rgb(255, 77, 0);
+}
+
+.add-keyword-button {
+    height: 35px;
+    width: 250px;
+    padding: 0;
+    border-radius: 10px;
+    border: none;
+    margin-top: auto;
+    margin-bottom: 30px;
+    background-color: rgb(255, 115, 0);
+    color: white;
+    font-size: 20px;
+    font-family: 'Mina', sans-serif;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.add-keyword-button:hover {
+    background-color: rgb(255, 77, 0);
+    /* Change the background color on hover */
+    color: white;
+    /* Change the text color on hover */
+    box-shadow: 0 0 5px rgb(255, 77, 0);
+}
+
+/* Keyword Selectors */
+
+.keyword-selectors-container {
+    padding: 0 30px;
     display: flex;
-    height: 50%;
+    align-content: center;
+    flex-direction: column;
+    width: 60vh;
+    height: 60vh;
+    background-color: #1b2631;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
 }
 
-.loading-icon-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.loading-icon {
-    height: 300px;
+.keyword-buttons-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 12px 0 12px;
+    height: 150px;
     width: auto;
+    border-radius: 20px;
+    background-color: #2c3e50;
 }
 
 
+.keyword-option {
+    height: 30px;
+    font-family: 'Mina', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: lightgrey;
+    color: #1b2631;
+    border: none;
+    margin: 5px;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
 
+.keyword-option:hover {
+    background-color: white;
+    /* Change the background color on hover */
+    color: #2c3e50;
+    /* Change the text color on hover */
+    box-shadow: 0 0 10px black
+}
 
+.done-choosing-keywords-button {
+    height: 35px;
+    width: 250px;
+    padding: 0;
+    border-radius: 10px;
+    border: none;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    background-color: rgb(255, 115, 0);
+    color: white;
+    font-size: 20px;
+    font-family: 'Mina', sans-serif;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.done-choosing-keywords-button:hover {
+    background-color: rgb(255, 77, 0);
+    /* Change the background color on hover */
+    color: white;
+    /* Change the text color on hover */
+    box-shadow: 0 0 5px rgb(255, 77, 0);
+}
+
+.chosen-keywords-row {
+    height: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.keyword-choice {
+    height: 35px;
+    font-family: 'Mina', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    width: 25%;
+    border-radius: 10px;
+    background-color: lightgrey;
+    color: #1b2631;
+    border: none;
+    margin: 2px;
+    padding: 5px 10px;
+    outline: none;
+
+    display: flex;
+    align-items: center;
+}
+
+.name-spacer{
+    height: 30px;
+    width: 30px;
+}
+.keyword-name {
+    font-family: 'Mina', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+}
+.keyword-x-buttons {
+    font-size: 30px;
+    height: 30px;
+    transition: color 0.3s
+}
+
+.keyword-x-buttons:hover {
+/* Change the background color on hover */
+color: red
+/* Change the text color on hover */
+}
 

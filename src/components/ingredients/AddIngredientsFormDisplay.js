@@ -7,13 +7,12 @@ export const AddIngredientsFormDisplay = ({ newIngredientProp, setNewIngredientP
             <h4 className="ingredient-prompt">Please add an ingredient you want to use</h4>
 
         {/* Name */}
-            <fieldset>
                 <div className="form-item-name">
-                    <h4 htmlFor="name">Name:</h4>
+                    <h4 className="name-label" htmlFor="name">Name:</h4>
                     <input
                         autoFocus
                         type="text"
-                        className="form-control"
+                        className="name-input"
                         placeholder="Ingredient"
                         value={newIngredientProp.name}
                         onChange={
@@ -24,13 +23,12 @@ export const AddIngredientsFormDisplay = ({ newIngredientProp, setNewIngredientP
                             }
                         } />
                 </div>
-            </fieldset>
 
         {/* Garnish */}
-            <fieldset>
                 <div className="form-item-garnish">
-                    <h4 htmlFor="isGarnish">Is this a Garnish?</h4>
-                    <input type="checkbox"
+                    <h4 className="garnish-label" htmlFor="isGarnish">Garnish?</h4>
+                    <input className="garnish-checkbox"
+                        type="checkbox"
                         checked={newIngredientProp.isGarnish}
                         onChange={
                             (event) => {
@@ -40,9 +38,8 @@ export const AddIngredientsFormDisplay = ({ newIngredientProp, setNewIngredientP
                             }
                         } />
                 </div>
-            </fieldset>
         {/* Flavor Traits */}
-            <fieldset>
+            <div className="flavor-traits-form">
                 <h4 className="flavor-traits-subtitle">Flavor Traits</h4>
 
             {/* show chosen keywords row*/}
@@ -53,13 +50,12 @@ export const AddIngredientsFormDisplay = ({ newIngredientProp, setNewIngredientP
                     setDisplayStateProp('selectors')}
                 }>Select Flavor Traits</button>
 
-            </fieldset>
+            </div>
             <div className="add-ingredients-buttons-row">
-                <button type="button" className="add-new-ingredient-button" 
+                <button type="button" className="save-new-ingredient-button" 
                     onClick={handleAddIngredientButtonClickProp}
                 >Save Ingredient</button>
                 
-                {/* show cancel button depending on whether userIngredients exists*/}
                 <button type="button" 
                     className="cancel-new-ingredient-button"
                     onClick={() => {

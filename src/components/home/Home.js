@@ -9,7 +9,7 @@ export const Home = () => {
     return <div className="home-container">
         <div className="home-description-section">
             <p className="home-description">
-            Manage your home bar inventory and make new cocktails inspired by classic cocktails that have stood the test of time.
+            Manage your home bar inventory and make new cocktails inspired by classic cocktails that have stood the test of time
             </p>
         </div>
         <div className="home-buttons-section">

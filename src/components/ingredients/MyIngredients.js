@@ -89,7 +89,7 @@ export const MyIngredients = ({chimeraUserObjProp, ingredientsProp, userIngredie
     //     dateAdded: str 
     //   }
     //also need to add up to 4 ingredient keywords
-    const handleAddIngredientButtonClick = (event) => {
+    const handleAddIngredientButtonClick = async (event) => {
         event.preventDefault()
 
         // console.log('You clicked the button')
@@ -112,7 +112,7 @@ export const MyIngredients = ({chimeraUserObjProp, ingredientsProp, userIngredie
             }
 
             //POST the ingredients to the API
-            return fetch(`http://localhost:8088/userIngredients`, {
+            return await fetch(`http://localhost:8088/userIngredients`, {
                 method: "POST",
                 headers: {
                     "Content-Type":"application/json"
@@ -189,8 +189,9 @@ export const MyIngredients = ({chimeraUserObjProp, ingredientsProp, userIngredie
                 {
                     userKeywordChoices.map(choice => {
                         // console.log(`keyword choices use effect${choice.name}`)
-                        return <button className="keyword keyword-choice" key={`keyword-choice--${choice.id}`}>
-                            {choice.name}
+                        return <button className="keyword-choice" key={`keyword-choice--${choice.id}`}>
+                            <div className="name-spacer"/>
+                            <p className="keyword-name">{choice.name}</p>
                             {/* add an x next to the name inside the button */}
                             <MdOutlineCancel className="keyword-x-buttons"  
                             onClick={(event) => {

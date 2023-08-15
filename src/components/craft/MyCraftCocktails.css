@@ -10,7 +10,9 @@
     justify-content: space-around;
 }
 .craft-header {
-    font-size: 30px;
+    font-family: 'Staatliches', cursive;
+    font-weight: 400;
+    font-size: 35px;
     text-align: center;
     margin: 15px 0;
 
@@ -18,6 +20,7 @@
 .craft-subtitle-choose {
     text-align: center;
     font-size: 24px;
+    font-weight: 300;
     height: 40px;
     width: 100%;
     margin-top: 10px;
@@ -46,6 +49,8 @@
 .craft-redirect-button {
     font-size: 24px;
     height: 39px;
+    font-family: 'Mina', sans-serif;
+    font-weight: 300;
     width: 50%;
     border: none;
     border-radius: 10px;
@@ -66,6 +71,7 @@
 .craft-subtitle-name {
     text-align: center;
     font-size: 24px;
+    font-weight: 300;
     height: 40px;
     width: 100%;
     padding: 0 12px 0 12px;
@@ -97,12 +103,15 @@
 
 .edit-cocktail-name-subtitle {
     font-size: 24px;
+    font-weight: 300;
 }
 
 .edit-cocktail-name-input {
     width: 80%;
     margin: 10px 0 10px 0;
     font-size: 20px;
+    font-family: 'Mina', sans-serif;
+    font-weight: bold;
     padding: 10px 5px 10px 5px;
     border: none;
     border-radius: 5px;
@@ -138,6 +147,8 @@
     border: none;
     border-radius: 10px;
     font-size: 20px;
+    font-family: 'Mina', sans-serif;
+    font-weight: bold;
     width: 60%;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
@@ -159,6 +170,7 @@
 
 .craft-cocktail-description {
     font-size: 20px;
+    font-weight: 300;
     padding: 10px 10px;
     border: none;
     border-radius: 20px;
@@ -170,6 +182,7 @@
 
 .craft-description-subtitle {
     font-size: 24px;
+    font-weight: 300;
 }
 
 .edit-cocktail-description {
@@ -184,6 +197,8 @@
 
 .edit-cocktail-description-input {
     font-size: 20px;
+    font-weight: bold;
+    font-family: 'Mina', sans-serif;
     padding: 10px 10px;
     border: none;
     border-radius: 5px;
@@ -254,6 +269,8 @@
     width: 50%;
     height: 35px;
     font-size: 20px;
+    font-weight: bold;
+    font-family: 'Mina', sans-serif;
 }
 
 .craft-buttons-row {
@@ -273,6 +290,7 @@
     background-color: rgb(255, 115, 0);
     color: white;
     font-size: 20px;
+    font-family: 'Mina', sans-serif;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
@@ -296,6 +314,7 @@
     background-color: rgb(255, 115, 0);
     color: white;
     font-size: 20px;
+    font-family: 'Mina', sans-serif;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
@@ -326,6 +345,7 @@
     background-color: red;
     color: white;
     font-size: 20px;
+    font-family: 'Mina', sans-serif;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
@@ -348,6 +368,7 @@
     background-color: lightgrey;
     color: #1b2631;
     font-size: 20px;
+    font-family: 'Mina', sans-serif;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
