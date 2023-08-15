@@ -17,7 +17,7 @@ export const MyIngredients = ({chimeraUserObjProp, ingredientsProp, userIngredie
             name: '',
             isGarnish: false,
             dateAdded: ''
-          })
+        })
 
     //addIngredientsForm menu
     const addIngredientsFormComponent = () => {

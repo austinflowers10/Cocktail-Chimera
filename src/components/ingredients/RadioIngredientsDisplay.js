@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import "./MyIngredients.css"
-import loadingIcon from "../images/Blinking squares.gif"
+// import loadingIcon from "../images/Blinking squares.gif"
+import cocktailGif from "../images/cocktail-gif.gif"
 
 //component for view showing database ingredient radio cards
 export const RadioIngredientsDisplay = ({userIngredientsProp, setDisplayStateProp, ingredientsProp, chimeraUserObjProp, postUserKeywordJoinedObjectProp, fetchUserIngredientsProp, keywordsProp}) => {
@@ -192,7 +193,7 @@ export const RadioIngredientsDisplay = ({userIngredientsProp, setDisplayStatePro
         </div>
     } else {
         return <div className="loading-icon-container">
-            <img className="loading-icon" src={loadingIcon} alt="Loading"/>
+            <img className="loading-icon" src={cocktailGif} alt="Loading"/>
         </div>
     }
 }

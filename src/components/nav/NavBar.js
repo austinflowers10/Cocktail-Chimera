@@ -1,5 +1,9 @@
 import { Link, useNavigate, useLocation } from "react-router-dom"
 import "./NavBar.css"
+import { BsPersonCircle } from "react-icons/bs";
+import { BiLogOut, BiSolidUserCircle } from "react-icons/bi";
+import { LiaCocktailSolid } from "react-icons/lia";
+
 
 export const NavBar = () => {
     const navigate = useNavigate()
@@ -7,19 +11,10 @@ export const NavBar = () => {
     const location = useLocation()
 
     return <div className="navbar-container">
-        <h1>Cocktail Chimera</h1>
+        <Link className="app-header" to="/">Cocktail Chimera <LiaCocktailSolid className="cocktail-icon"/></Link>
 
         <ul className="navbar-list">
             {/* Show Home Link if not on home page */}
-            {
-                location.pathname === "/"
-
-                ? null
-
-                : <li className="navbar__item active">
-                    <Link className="navbar__link" to="/">Home</Link>
-                </li>
-            }
             {/*  */}
             {
                 location.pathname === "/create-cocktail" || location.pathname === "/my-craft-cocktails" || location.pathname === "/my-ingredients"
@@ -42,7 +37,7 @@ export const NavBar = () => {
             }
             {/* Show the Create a Cocktail link on the My Craft Cocktails page and the My Ingredients page */}
             {
-                location.pathname === "/my-craft-cocktails" || location.pathname === "/my-ingredients"
+                location.pathname === "/my-craft-cocktails" || location.pathname === "/my-ingredients" || location.pathname === "/classic-cocktails"
 
                 ? <li className="navbar__item active">
                     <Link className="navbar__link" to="/create-cocktail">Create a Cocktail</Link>
@@ -60,16 +55,14 @@ export const NavBar = () => {
 
                 : null
             }
-
-            <li className="navbar__item navbar__logout">
-                <Link className="navbar__link" to="" onClick={() => {
+        </ul>
+        <div className="user-icons-container">
+            <BiSolidUserCircle className="user-icon profile"/>
+            <BiLogOut className="user-icon log-out" onClick={() => {
                     localStorage.removeItem("chimera_user")
                     navigate("/", {replace: true})
-                }}>Logout</Link>
-            </li>
-        </ul>
-        <button className="user-icon">{chimeraUserObj.name.slice(0,1)}</button>
-        {/* Add an onClick to toggle user info box visible or invisible and put the user email and logout button in there.  */}
+                }}/>
+        </div>
         
     </div>
 }
