@@ -48,7 +48,9 @@ export const ClassicCocktails = ( {classicCocktailsProp, chosenClassicProp, setC
 
         //change description section comments when a button click changes chosenClassicProp
         : setClassicsDescriptionSectionContents(
-                <>
+            <>
+                <h3 className="classics-subtitle-name">{chosenClassicProp.name}</h3>
+                <div className="classic-description-image-buttons">
                     <div className="image-container">
                         <img className="classics-image" src={chosenClassicProp.image}/>
                     </div>
@@ -65,8 +67,15 @@ export const ClassicCocktails = ( {classicCocktailsProp, chosenClassicProp, setC
                         }
                         >Create a Cocktail</button>
                     </div>
+                </div>
                 </>
             )
+
+            if (chosenClassicProp) {
+                document.querySelector('.classics-description-section').style.display = "flex"
+            } else {
+                document.querySelector('.classics-description-section').style.display = "none"
+            }
         },[chosenClassicProp, favoritesProp]
     )
 
@@ -74,49 +83,44 @@ export const ClassicCocktails = ( {classicCocktailsProp, chosenClassicProp, setC
 //map over classicCocktails and put each as a button
     return <>
         <h2 className="classics-header">Classic Cocktails</h2>
-        <div className="classics-subtitles-row">
-            <h3 className="classics-subtitle-choose">Choose a Cocktail</h3>
-                    {
-                        chosenClassicProp
-                        ? <h3 className="classics-subtitle-name">{chosenClassicProp.name}</h3>
-                        : <h3 className="classics-subtitle-name"></h3>
-                    }
-        </div>
         <div className="classics-container">
-            <div className="classics-buttons-section">
-                {
-                    classicCocktailsProp.map((classic) => {
-                        const isFavorite = favoritesProp.find(favorite => classic.id === favorite.cocktailId)
-            
-                        if (isFavorite) {  
-                            return <div key={`button-row--${classic.id}`} className="button-row">
-                            <IoStar className="little-star"/>
-                            <button 
-                                key={`classics-button--${classic.id}`} 
-                                className="classics-button" 
-                                id={`classics-button--${classic.id}`}
-                                onClick={(event) => {
-                                        //update shared state object when a button is clicked
-                                        setChosenClassicProp(classic)
-                                    }}
+            <div className="classics-buttons-section-container">
+                <h3 className="classics-subtitle-choose">Choose a Cocktail</h3>
+                <div className="classics-buttons-section">
+                    {
+                        classicCocktailsProp.map((classic) => {
+                            const isFavorite = favoritesProp.find(favorite => classic.id === favorite.cocktailId)
+                
+                            if (isFavorite) {  
+                                return <div key={`button-row--${classic.id}`} className="button-row">
+                                <IoStar className="little-star"/>
+                                <button 
+                                    key={`classics-button--${classic.id}`} 
+                                    className="classics-button" 
+                                    id={`classics-button--${classic.id}`}
+                                    onClick={(event) => {
+                                            //update shared state object when a button is clicked
+                                            setChosenClassicProp(classic)
+                                        }}
+                                    >{classic.name}</button>
+                                </div>
+                            } else {
+                                return <div key={`button-row--${classic.id}`} className="button-row">
+                                <IoStar className="no-star"/>
+                                <button 
+                                    key={`classics-button--${classic.id}`} 
+                                    className="classics-button" 
+                                    id={`classics-button--${classic.id}`}
+                                    onClick={(event) => {
+                                            //update shared state object when a button is clicked
+                                            setChosenClassicProp(classic)
+                                        }}
                                 >{classic.name}</button>
-                            </div>
-                        } else {
-                            return <div key={`button-row--${classic.id}`} className="button-row">
-                            <IoStar className="no-star"/>
-                            <button 
-                                key={`classics-button--${classic.id}`} 
-                                className="classics-button" 
-                                id={`classics-button--${classic.id}`}
-                                onClick={(event) => {
-                                        //update shared state object when a button is clicked
-                                        setChosenClassicProp(classic)
-                                    }}
-                            >{classic.name}</button>
-                            </div>
-                        }   
-                    })
-                }
+                                </div>
+                            }   
+                        })
+                    }
+                </div>
             </div>
             <div className="classics-description-section">
                 {/* render prompt or render entire description section */}

@@ -1,5 +1,6 @@
 .my-ingredients-header {
     text-align: center;
+    margin: 15px 0;
 }
 
 
@@ -142,14 +143,14 @@
 }
 
 .loading-icon-container {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-top: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .loading-icon {
-    height: 100px;
+    height: 300px;
     width: auto;
 }
 

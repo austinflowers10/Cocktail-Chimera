@@ -5,6 +5,7 @@ import { ClassicCocktails } from "../classics/ClassicCocktails"
 import { CreateCocktail } from "../create/CreateCocktail"
 import { useEffect, useState } from "react"
 import { MyIngredients } from "../ingredients/MyIngredients"
+import { MyCraftCocktails } from "../craft/MyCraftCocktails"
 
 
 export const ApplicationViews = () => {
@@ -14,6 +15,7 @@ export const ApplicationViews = () => {
     const [favorites, setFavorites] = useState([])
     const [ingredients, setIngredients] = useState([])
     const [userIngredients, setUserIngredients] = useState([])
+    const [userCraftCocktails, setUserCraftCocktails] = useState([])
     const [keywords, setKeywords] = useState([])
 
     //function to fetch ingredients with ingredientKeywords expanded
@@ -56,6 +58,17 @@ export const ApplicationViews = () => {
             })
     }
 
+    const fetchCraftCocktails = async () => {
+        await fetch('http://localhost:8088/userCocktails?_embed=userCocktailIngredients')
+            .then(response => response.json())
+            .then((cocktailsData) => {
+            // filter and set userCraftCocktails state to only the chimera_user
+                const chimeraUserCocktails = cocktailsData.filter(craft => craft.userId === chimeraUserObj.id)
+                setUserCraftCocktails(chimeraUserCocktails)
+            })
+    }
+
+
      //Get all classics and fetch favorites on initial render
     useEffect(() => {
         fetch('http://localhost:8088/cocktails?_embed=classicsIngredients')
@@ -68,9 +81,11 @@ export const ApplicationViews = () => {
             fetchIngredients()
             fetchUserIngredients()
             fetchKeywords()
+            fetchCraftCocktails()
 
         },[]
     )
+
 
     if (!ingredients.length || !keywords.length) {
         return null
@@ -103,6 +118,9 @@ export const ApplicationViews = () => {
                     chimeraUserObjProp={chimeraUserObj}
                     ingredientsProp={ingredients}
                     userIngredientsProp={userIngredients}
+                    keywordsProp={keywords}
+                    fetchUserIngredientsProp={fetchUserIngredients}
+                    fetchCraftCocktailsProp={fetchCraftCocktails}
                     />}/> 
 
                 
@@ -115,7 +133,11 @@ export const ApplicationViews = () => {
                     fetchUserIngredientsProp={fetchUserIngredients}
                     />}/>
 
-                <Route path="/my-craft-cocktails" element={<></>}/>
+                <Route path="/my-craft-cocktails" element={<MyCraftCocktails
+                    userCraftCocktailsProp={userCraftCocktails}
+                    userIngredientsProp={userIngredients}
+                    fetchCraftCocktailsProp={fetchCraftCocktails}
+                />}/>
             </Route>
         </Routes>
     )
