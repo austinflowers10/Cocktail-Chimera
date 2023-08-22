@@ -549,9 +549,9 @@ fieldset {
   flex-direction: column;
   position: absolute;
   visibility: hidden;
-  right: 4%;
+  right: 8%;
   z-index: 100;
-  width: 30%;
+  width: 60vh;
   height: 80vh;
   opacity: 1;
   border: none;
