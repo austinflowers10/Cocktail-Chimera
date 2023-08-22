@@ -1817,11 +1817,6 @@
       "id": 7
     },
     {
-      "userId": 2,
-      "cocktailId": 1,
-      "id": 8
-    },
-    {
       "userId": 1,
       "cocktailId": 6,
       "id": 12
@@ -1845,6 +1840,26 @@
       "userId": 1,
       "cocktailId": 1,
       "id": 16
+    },
+    {
+      "userId": 1,
+      "cocktailId": 14,
+      "id": 17
+    },
+    {
+      "userId": 1,
+      "cocktailId": 10,
+      "id": 18
+    },
+    {
+      "userId": 2,
+      "cocktailId": 4,
+      "id": 20
+    },
+    {
+      "userId": 2,
+      "cocktailId": 1,
+      "id": 21
     }
   ]
 }
