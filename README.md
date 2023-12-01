@@ -3,7 +3,7 @@
 
 Cocktail Chimera is a system which allows users to invent new cocktails by using Classic Cocktails as templates. When a user changes one of the ingredients in the template, the user can view the flavor traits that ingredient would change in the resulting new cocktail. Users can add and delete their home ingredients. When creating an ingredient, the user can set flavor traits to describe its flavor profile, which will then be used in the cocktail creation menu to show the aforementioned flavor changes. The user can also save new craft cocktails and edit the name and description if any adjustments are needed, as well as delete craft cocktails. Functionality is implemented with React JS, and styling is done with vanilla CSS and Ant Design Modals.
 
-The App consists of several features:
+**App Features:**
 
 - **Classic Cocktails Page:**
     - View a list of Classic Cocktails each with a picture and description
