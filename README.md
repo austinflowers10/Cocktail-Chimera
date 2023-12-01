@@ -5,18 +5,18 @@ Cocktail Chimera is a system which allows users to invent new cocktails by using
 
 The App consists of several features:
 
-**- Classic Cocktails Page:**
+- **Classic Cocktails Page:**
     - View a list of Classic Cocktails each with a picture and description
     - favorite/unfavorite cocktails
     - Select a cocktail to use as a base template in order to create a new cocktail on the Create a Cocktail Page
       
-**- My Ingredients Page:**
+- **My Ingredients Page:**
     - Save your own ingredients by selecting them from the list
     - Fill out a form to add new ingredients that you have at home if they are not in the list
     - Name the ingredient, select whether it is a garnish, and describe its flavor profile by assigning up to 4 Flavor Traits, which will be used to create a cocktail on the Create a Cocktail Page
     - Delete ingredients you no longer have at home or no longer wish to use
     
-**- Create a Cocktail Page:**
+- **Create a Cocktail Page:**
     - Choose a Classic Cocktail to use as a base template in order to create a new cocktail
     - View ingredients of the chosen Classic Cocktail along with the Flavor Traits of each Ingredient
     - Change those ingredients to new ingredients
@@ -24,7 +24,7 @@ The App consists of several features:
     - Adjust the filter to either make the ingredient matches more loose or more strict
     - Add a name and recipe description for the new cocktail and submit it 
 
-**- My Craft Cocktails Page:**
+- **My Craft Cocktails Page:**
     - View a list of Craft Cocktails that have been created on the Create a Cocktail Page
     - View each cocktail
     - Edit the name and description
